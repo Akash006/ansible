@@ -1,0 +1,8 @@
+- name: display inventory variables
+  debug:
+    msg: "Inventory User : {{ ansible_ssh_user }}"
+
+- name: Add the user {{ username }}
+  ansible.builtin.user:
+    name: "{{ username }}"
+    state: present

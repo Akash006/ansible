@@ -1,0 +1,6 @@
+- name: Role example
+  hosts: all
+  vars:
+       username: devops
+  roles:
+      - newRole

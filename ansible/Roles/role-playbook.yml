@@ -1,0 +1,4 @@
+- name: Role example
+  hosts: all
+  roles:
+      - newRole

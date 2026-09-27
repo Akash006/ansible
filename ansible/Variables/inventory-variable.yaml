@@ -1,0 +1,7 @@
+-
+  name: Variable Example playbook
+  hosts: all
+  tasks:
+    - name: display inventory variables
+      debug:
+        msg: "Host User : {{ ansible_ssh_user }}"

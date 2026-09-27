@@ -1,0 +1,14 @@
+-
+  name: Variable Example playbook
+  hosts: all
+  vars:
+    username: devops
+  tasks:
+    - name: display inventory variables
+      debug:
+        msg: "Inventory User : {{ ansible_ssh_user }}"
+
+    - name: Add the user {{ username }}
+      ansible.builtin.user:
+        name: "{{ username }}"
+        state: present

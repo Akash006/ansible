@@ -1,0 +1,10 @@
+-
+  name: Simple loop example
+  hosts: all
+  tasks:
+    - name: Iterate over the loop
+      debug:
+          msg: "My name is : {{ item.name }}"
+      loop:
+          - { name: Akash, course: devops }
+          - { name: Centrik, course: Jenkins }

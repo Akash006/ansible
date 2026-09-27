@@ -1,0 +1,11 @@
+-
+  name: Simple loop example
+  hosts: all
+  tasks:
+    - name: Iterate over the loop
+      debug:
+          msg: "My name is : {{ item }}"
+      loop:
+          - Akash
+          - DevOps
+          - Ansible

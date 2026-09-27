@@ -1,0 +1,14 @@
+- name: Exception handling example
+  hosts: all
+  tasks:
+    - name: Name of the task to be executed
+      block:
+        - command: cat /etc/os-releases
+
+      rescue:
+        - debug:
+            msg: 'There was an exception.. '
+
+      always:
+        - debug:
+            msg: "this will execute in all scenarios."
