@@ -1,0 +1,20 @@
+- name: Play 1
+  hosts: all
+
+  tasks:
+    - name: Test connectivity
+      ping:
+
+    - name: Start SSH server
+      service:
+        name: ssh
+        state: started
+
+    - name: Get container information
+      command: hostname
+      register: result
+
+    - name: Display hostname
+      debug:
+        msg: "Container Hostname : {{ result.stdout }}"
+

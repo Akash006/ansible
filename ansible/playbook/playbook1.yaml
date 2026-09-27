@@ -1,0 +1,5 @@
+- name: Play 1
+  hosts: all
+  tasks:
+    - name: Test connectivity
+      ping:

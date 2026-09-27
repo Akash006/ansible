@@ -1,0 +1,14 @@
+-
+  name: Script module example
+  hosts: all
+  tasks:
+    - name: Run python script
+      script: ./check_host.py
+      args:
+        executable: python3
+      register: result
+
+    - name: print output
+      debug:
+          var: result
+

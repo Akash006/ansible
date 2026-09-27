@@ -1,0 +1,11 @@
+-
+  name: Execute
+  hosts: all
+  tasks:
+    - name: Execute command on server
+      command: cat /etc/os-release
+      register: output
+
+    - name: Show output
+      debug:
+        var: output.stdout_lines

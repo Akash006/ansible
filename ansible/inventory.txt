@@ -1,0 +1,7 @@
+[Web]
+web1 ansible_host=172.17.0.5 ansible_ssh_user=root ansible_ssh_pass=Passw0rd
+web2 ansible_host=172.17.0.6 ansible_ssh_user=root ansible_ssh_pass=Passw0rd
+
+[database]
+db1 ansible_host=172.17.0.4 ansible_ssh_user=root ansible_ssh_pass=Passw0rd
+db2 ansible_host=172.17.0.3 ansible_ssh_user=root ansible_ssh_pass=Passw0rd

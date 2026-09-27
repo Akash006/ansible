@@ -1,0 +1,10 @@
+-
+  name: Play 1
+  hosts: all
+  tasks:
+    - name: Test connectivity
+      ping:
+    - name: Start ssh server
+      service:
+        name: ssh
+        state: started
